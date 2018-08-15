@@ -51,8 +51,14 @@
       <artifactId>spring-cloud-starter-ribbon</artifactId>
     </dependency>
 
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpclient</artifactId>
+      <version>4.5.2</version>
+    </dependency>
+
   </dependencies>
-  
+
 
   <build>
     <finalName>eureka-parent</finalName>
