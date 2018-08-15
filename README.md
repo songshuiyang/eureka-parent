@@ -15,6 +15,8 @@ Netflix的部分组件及功能特性如下：
 ### 什么是 Eureka
 Eureka是Netflix开发的服务发现框架，本身是一个基于REST的服务，主要用于定位运行在AWS域中的中间层服务，以达到负载均衡和中间层服务故障转移的目的。SpringCloud将它集成在其子项目spring-cloud-netflix中，以实现SpringCloud的服务发现功能。
 
+![image]( https://github.com/songshuiyang/eureka-parent/blob/master/doc/images/eureka1.png)
+
 ### 服务发现
 服务发现就像聊天室一个,每个用户来的时候去服务器上注册,这样他的好友们就能看到你,你同时也将获取好友的
 上线列表.在微服务中,服务就相当于聊天室的用户,而服务注册中心就像聊天室服务器一样,目前服务发现的解决
