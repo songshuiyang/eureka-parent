@@ -1,0 +1,11 @@
+server:
+  port: 9082
+spring:
+  application:
+    name: eureka-consumer
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:9080/eureka/

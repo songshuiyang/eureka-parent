@@ -1,0 +1,8 @@
+server:
+  port: 9080
+eureka:
+  client:
+    # 声明是否将自己的信息注册到 Eureka 服务器中
+    register-with-eureka: false
+    # 声明是否到Eureka服务器中抓取注册信息
+    fetch-registry: false
