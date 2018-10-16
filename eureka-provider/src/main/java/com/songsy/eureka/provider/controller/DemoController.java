@@ -1,6 +1,8 @@
 package com.songsy.eureka.provider.controller;
 
 import com.songsy.eureka.provider.domain.Person;
+import com.songsy.eureka.provider.utils.IpConfigurationUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +22,7 @@ public class DemoController {
             produces = MediaType.APPLICATION_JSON_VALUE)
     public Person findPerson(@PathVariable("personId") Integer personId, HttpServletRequest request) {
         Person person = new Person(personId, "songsy", 18);
-        person.setName(person.getName() + request.getRequestURI().toString());
+        person.setName(person.getName() + "端口：" + IpConfigurationUtils.getPort());
         return person;
     }
 }

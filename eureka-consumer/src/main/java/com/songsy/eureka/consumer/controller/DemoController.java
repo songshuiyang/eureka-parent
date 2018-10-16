@@ -20,7 +20,6 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 @RestController
 public class DemoController {
-
     /**
      * 主要用来调用REST服务，本身并不具备调用分布式服务的能力，但通过LoadBalanced注解
      * @return
@@ -36,8 +35,7 @@ public class DemoController {
     public String router() {
         RestTemplate restTpl = getRestTemplate();
         // 根据应用名称调用服务
-        String json = restTpl.getForObject(
-                "http://eureka-provider/person/1", String.class);
+        String json = restTpl.getForObject("http://eureka-provider/person/1", String.class);
         return json;
     }
 }
